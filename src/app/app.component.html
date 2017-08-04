@@ -1,9 +1,11 @@
+
 <div class="col-md-6">
+     <!-- <a href="" class="btn btn-primary" (click)="syncronize()">Sync</a> -->
     <h2>Listados de Notas</h2>
     <ul class="list-group">
         <li class="list-group-item" *ngFor="let x of my_notes" (click)="viewNote(x)">{{ x.id}} {{x.title}}</li>
     </ul>
-    <button type="button" class="btn btn-primary.btn-block" (click)="addNote()">Nueva Nota</button>
+    <button type="button" class="btn btn-primary btn-block" (click)="addNote()">Nueva Nota</button>
 </div>
 <div class="col-md-6" *ngIf="show_form">
     <h2>Nueva Nota</h2>
@@ -13,7 +15,7 @@
     <hr>
     <div class="row">
         <div class="col-md-4">
-            <a href="#" class="btn btn-danger btn-block" (click)="delete()" *ngIf="editing">Delete</a>
+            <a href="#" class="btn btn-danger btn-block" (click)="removeNotes()" *ngIf="editing">Delete</a>
         </div>
         <div class="col-md-4">
             <a href="#" class="btn btn-default btn-block" (click)="cancel()">Cancel</a>
